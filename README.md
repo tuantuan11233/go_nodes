@@ -3,7 +3,7 @@
 # golang语言特性
 
 1. 垃圾回收
-- 内存自动回收，再也不需要开发人员管理内存
+- 内存自动回收，再也不需要开发人员管理内存
 - 开发人员专注业务实现，降低了心智负担
 - 只需要new分配内存，不需要释放
 2. 天然并发
@@ -33,7 +33,8 @@
   -/bin #放的是可执行文件
   -/vender #放的是第三方包
   -/pkg #静态库
-export GOPATH=d:/project/ #指定项目位置
+export GOPATH="/Users/wangye/Desktop/go" #指定项目位置
+export PATH="$PATH:/Users/wangye/Desktop/go/bin" #指定编译后文件可执行路径,go install后可全局直接执行
 ```
 # go程序基本结构
 
