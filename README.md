@@ -1,9 +1,24 @@
-[TOC]
+
+- [golang语言特性](#golang语言特性)
+- [包的概念](#包的概念)
+- [go程序目录结构](#go程序目录结构)
+- [go程序基本结构](#go程序基本结构)
+- [编译go](#编译go)
+  - [go build](#go-build)
+  - [go run](#go-run)
+  - [go install](#go-install)
+  - [go doc](#go-doc)
+  - [go get [-alrtAFR]](#go-get--alrtafr)
+  - [go env](#go-env)
+  - [go fmt](#go-fmt)
+  - [go list](#go-list)
+  - [交叉编译](#交叉编译)
+- [学习golang](#学习golang)
 
 # golang语言特性
 
 1. 垃圾回收
-- 内存自动回收，再也不需要开发人员管理内存
+- 内存自动回收，再也不需要开发人员管理内存
 - 开发人员专注业务实现，降低了心智负担
 - 只需要new分配内存，不需要释放
 2. 天然并发
@@ -33,8 +48,7 @@
   -/bin #放的是可执行文件
   -/vender #放的是第三方包
   -/pkg #静态库
-export GOPATH="/Users/wangye/Desktop/go" #指定项目位置
-export PATH="$PATH:/Users/wangye/Desktop/go/bin" #指定编译后文件可执行路径,go install后可全局直接执行
+export GOPATH=d:/project/ #指定项目位置
 ```
 # go程序基本结构
 
@@ -82,6 +96,31 @@ func main() {
 	1. 先编译得到一个可执行文件
 
  	2. 将可执行文件拷贝到`GOPATH/bin`
+
+## go doc
+
+`go doc builtin.delete ` 查看builtin.delete的用法
+
+## go get [-alrtAFR]
+```
+    # 显示操作流程日志及信息
+    -v
+    # 下载丢失的包，但不更新已经存在的包
+    -u
+    # 只下载，不自动安装
+    -d
+    # 允许使用 HTTP 方式进行下载操作
+    -insecure
+```
+## go env
+查看环境变量
+
+## go fmt
+格式化go代码文件
+
+## go list
+列出全部安装的package
+
 
 ## 交叉编译
 
